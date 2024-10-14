@@ -6,11 +6,11 @@
 /*   By: mkaliszc <mkaliszc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 13:27:51 by mkaliszc          #+#    #+#             */
-/*   Updated: 2024/10/14 14:16:18 by mkaliszc         ###   ########.fr       */
+/*   Updated: 2024/10/14 17:18:20 by mkaliszc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <libft.h>
+#include "libft.h"
 #include <stdio.h>
 
 void	ft_bzero(void *s, size_t n)

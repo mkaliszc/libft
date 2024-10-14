@@ -1,37 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkaliszc <mkaliszc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 12:22:32 by mkaliszc          #+#    #+#             */
-/*   Updated: 2024/10/15 00:31:46 by mkaliszc         ###   ########.fr       */
+/*   Created: 2024/10/14 23:42:17 by mkaliszc          #+#    #+#             */
+/*   Updated: 2024/10/15 01:03:22 by mkaliszc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+size_t	ft_strlcat(char *dest, const char *src, size_t n)
 {
-	size_t			i;
-	unsigned char	*d;
+	size_t	i;
+	size_t	j;
 
+	j = ft_strlen(dest);
+	if (n <= j)
+		return (ft_strlen(src) + j);
 	i = 0;
-	d = (unsigned char *)s;
-	while (i < n)
+	while (i + j < n - 1 && src[i] != '\0')
 	{
-		d[i] = (unsigned char)c;
+		dest[j + i] = src[i];
 		i++;
 	}
-	return (s);
+	dest[i + j] = '\0';
+	return (ft_strlen(src) + j);
 }
 
 /* int main()
 {
-    char test[10];
-    
-    ft_memset(test, 'A', 10);
-    test[10] = '\0';
-    printf("%s", test);
+	char dest[10] = "Hello";
+	char test[] = ", World!";
+	
+	size_t i = ft_strlcat(dest, test, 10);
+	printf("char : %s and int : %ld", dest ,i);
+	return(0);
 } */

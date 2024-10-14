@@ -6,11 +6,11 @@
 /*   By: mkaliszc <mkaliszc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 23:13:36 by mkaliszc          #+#    #+#             */
-/*   Updated: 2024/10/14 13:12:21 by mkaliszc         ###   ########.fr       */
+/*   Updated: 2024/10/14 17:18:32 by mkaliszc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
