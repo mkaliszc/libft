@@ -10,11 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include<libft.h>
+#include <libft.h>
 
-int ft_isalnum(int arg)
+int	ft_isalnum(int arg)
 {
-    if(ft_isalpha(arg) ==  1 || ft_isdigit(arg) == 1)
-        return(1);
-    return(0);
+	if (ft_isalpha(arg) == 1 || ft_isdigit(arg) == 1)
+		return (1);
+	return (0);
 }

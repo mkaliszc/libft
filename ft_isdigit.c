@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkaliszc <mkaliszc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/03 09:24:01 by mkaliszc            #+#    #+#             */
-/*   Updated: 2024/10/03 09:24:01 by mkaliszc           ###   ########.fr       */
+/*   Created: 2024/10/14 14:12:20 by mkaliszc          #+#    #+#             */
+/*   Updated: 2024/10/14 14:12:20 by mkaliszc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int arg)
+int	ft_isdigit(int arg)
 {
-    if (arg >= '0' && arg <= '9')
-        return (1);
-    return (0);
+	if (arg >= '0' && arg <= '9')
+		return (1);
+	return (0);
 }

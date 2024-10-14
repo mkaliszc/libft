@@ -1,47 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkaliszc <mkaliszc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/12 23:13:36 by mkaliszc          #+#    #+#             */
-/*   Updated: 2024/10/14 13:12:21 by mkaliszc         ###   ########.fr       */
+/*   Created: 2024/10/14 13:27:51 by mkaliszc          #+#    #+#             */
+/*   Updated: 2024/10/14 14:16:18 by mkaliszc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//#include <libft.h>
 #include <stdio.h>
 
-int	ft_atoi(const char *str)
+void	ft_bzero(void *s, size_t n)
 {
-	int	i;
-	int	nbr;
-	int	sign;
+	size_t			i;
+	unsigned char	*d;
 
 	i = 0;
-	nbr = 0;
-	sign = 1;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
-		|| str[i] == '\r' || str[i] == '\v' || str[i] == '\v')
-		i++;
-	if (str[i] == '-')
+	d = (unsigned char *)s;
+	while (i < n)
 	{
-		sign = -1;
+		d[i] = '\0';
 		i++;
 	}
-	else if (str[i] == '+')
-		i++;
-	while (str[i] <= '9' && str[i] >= '0')
-	{
-		nbr = nbr * 10 + str[i] - '0';
-		i++;
-	}
-	return (nbr * sign);
 }
 /*
 int main()
 {
-    //(void)argc;
-    printf("%d", ft_atoi("     -23a"));
+    char    test[]= "Hello";
+    int i = 0;
+    
+    printf("%s\n", test);
+    ft_bzero(test, 3);
+    while (i < 6)
+    {
+        if (test[i] != '\0')
+            printf("%c", test[i]);
+        i++;
+    }
     return(0);
 }*/

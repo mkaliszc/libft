@@ -13,14 +13,14 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <stdlib.h>
+# include <stdlib.h>
 
-int ft_isalpha(int arg);
-int ft_isdigit(int arg);
-int ft_isalnum(int arg);
-size_t ft_strlen(const char *s);
-int ft_isascii (int c);
-int ft_isprint(int c);
-
+int		ft_isalpha(int arg);
+int		ft_isdigit(int arg);
+int		ft_isalnum(int arg);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
+int		ft_atoi(const char *str);
+size_t	ft_strlen(const char *s);
 
 #endif
