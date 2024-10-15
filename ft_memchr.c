@@ -6,7 +6,7 @@
 /*   By: mkaliszc <mkaliszc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 17:46:17 by mkaliszc          #+#    #+#             */
-/*   Updated: 2024/10/15 18:08:00 by mkaliszc         ###   ########.fr       */
+/*   Updated: 2024/10/15 23:58:21 by mkaliszc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	index = 0;
 	ptr = (unsigned char *)s;
- 	while (index < n)
+	while (index < n)
 	{
 		if (ptr[index] == c)
 		{
@@ -27,7 +27,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		}
 		index++;
 	}
-	return (NULL); 
+	return (NULL);
 }
 
 /* int main()

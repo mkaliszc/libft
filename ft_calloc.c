@@ -6,7 +6,7 @@
 /*   By: mkaliszc <mkaliszc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 21:55:42 by mkaliszc          #+#    #+#             */
-/*   Updated: 2024/10/15 23:17:50 by mkaliszc         ###   ########.fr       */
+/*   Updated: 2024/10/15 23:56:20 by mkaliszc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	return (ptr);
 }
 
-int main()
+/* int main()
 {
 	int *ptr;
 	int	i = 0;
@@ -40,4 +40,4 @@ int main()
 	}
 	free(ptr);
 	return(0);
-}
+} */
