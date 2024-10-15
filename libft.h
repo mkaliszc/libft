@@ -15,6 +15,8 @@
 
 # include <stdlib.h>
 # include <stdio.h>
+# include <ctype.h>
+# include <string.h>
 
 int		ft_isalpha(int arg);
 int		ft_isdigit(int arg);
@@ -22,6 +24,7 @@ int		ft_isalnum(int arg);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_atoi(const char *str);
+int		ft_toupper(int c);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);

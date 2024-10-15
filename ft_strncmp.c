@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkaliszc <mkaliszc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 12:22:32 by mkaliszc          #+#    #+#             */
-/*   Updated: 2024/10/15 14:08:19 by mkaliszc         ###   ########.fr       */
+/*   Created: 2024/10/15 15:51:59 by mkaliszc          #+#    #+#             */
+/*   Updated: 2024/10/15 17:21:42 by mkaliszc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t			i;
-	unsigned char	*d;
+	size_t	index;
 
-	i = 0;
-	d = (unsigned char *)s;
-	while (i < n)
+	index = 0;
+	while ((s1[index] != '\0' || s2[index] != '\0') && index < n)
 	{
-		d[i] = (unsigned char)c;
-		i++;
+		if (s1[index] != s2[index])
+			return (s1[index] - s2[index]);
+		index++;
 	}
-	return (s);
+	return (0);
 }
 
 /* int main()
 {
-    char test[10];
-    
-    ft_memset(test, 'A', 10);
-    test[10] = '\0';
-    printf("%s", test);
+	char test[] = "Helzo";
+	char test2[] = "Helo";
+
+	printf("%d\n", ft_strncmp(test,test2, 4));
+	printf("%d\n", strncmp(test,test2, 4));
+	return(0);
 } */

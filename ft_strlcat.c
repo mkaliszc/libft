@@ -6,7 +6,7 @@
 /*   By: mkaliszc <mkaliszc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 23:42:17 by mkaliszc          #+#    #+#             */
-/*   Updated: 2024/10/15 01:03:22 by mkaliszc         ###   ########.fr       */
+/*   Updated: 2024/10/15 14:56:24 by mkaliszc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t n)
 	if (n <= j)
 		return (ft_strlen(src) + j);
 	i = 0;
-	while (i + j < n - 1 && src[i] != '\0')
+	while (i < n - j - 1 && src[i] != '\0')
 	{
 		dest[j + i] = src[i];
 		i++;

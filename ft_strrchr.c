@@ -1,37 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkaliszc <mkaliszc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 12:22:32 by mkaliszc          #+#    #+#             */
-/*   Updated: 2024/10/15 14:08:19 by mkaliszc         ###   ########.fr       */
+/*   Created: 2024/10/15 15:19:12 by mkaliszc          #+#    #+#             */
+/*   Updated: 2024/10/15 17:21:23 by mkaliszc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+char	*ft_strrchr(const char *str, int c)
 {
-	size_t			i;
-	unsigned char	*d;
+	int		index;
+	char	*ptr;
+	char	*return_value;
 
-	i = 0;
-	d = (unsigned char *)s;
-	while (i < n)
+	index = 0;
+	ptr = (char *)str;
+	while (ptr[index] != '\0')
 	{
-		d[i] = (unsigned char)c;
-		i++;
+		if (ptr[index] == c)
+			return_value = &ptr[index];
+		index++;
 	}
-	return (s);
+	if (return_value)
+		return (return_value);
+	else
+		return (NULL);
 }
 
 /* int main()
 {
-    char test[10];
-    
-    ft_memset(test, 'A', 10);
-    test[10] = '\0';
-    printf("%s", test);
+	char test[] = "Hello, world";
+	
+	printf("%s\n", ft_strrchr(test, 'o'));
+	printf("%s\n", strrchr(test, 'o'));
+	return(0);
 } */
