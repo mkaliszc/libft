@@ -6,7 +6,7 @@
 /*   By: mkaliszc <mkaliszc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 18:08:10 by mkaliszc          #+#    #+#             */
-/*   Updated: 2024/10/15 23:58:29 by mkaliszc         ###   ########.fr       */
+/*   Updated: 2024/10/16 23:40:27 by mkaliszc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	index = 0;
 	cast_s1 = (unsigned char *)s1;
 	cast_s2 = (unsigned char *)s2;
-	while ((cast_s1[index] != '\0' || cast_s2[index] != '\0') && index < n)
+	while (index < n)
 	{
 		if (cast_s1[index] != cast_s2[index])
 			return (cast_s1[index] - cast_s2[index]);

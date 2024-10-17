@@ -6,7 +6,7 @@
 /*   By: mkaliszc <mkaliszc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 23:13:36 by mkaliszc          #+#    #+#             */
-/*   Updated: 2024/10/14 17:18:32 by mkaliszc         ###   ########.fr       */
+/*   Updated: 2024/10/17 00:10:00 by mkaliszc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_atoi(const char *str)
 	nbr = 0;
 	sign = 1;
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
-		|| str[i] == '\r' || str[i] == '\v' || str[i] == '\v')
+		|| str[i] == '\r' || str[i] == '\f' || str[i] == '\v')
 		i++;
 	if (str[i] == '-')
 	{
@@ -38,10 +38,10 @@ int	ft_atoi(const char *str)
 	}
 	return (nbr * sign);
 }
-/*
-int main()
+
+/* int main()
 {
     //(void)argc;
-    printf("%d", ft_atoi("     -23a"));
+    printf("%d", ft_atoi("  \n \t \v \f \r   -23a"));
     return(0);
-}*/
+} */

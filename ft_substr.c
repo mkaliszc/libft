@@ -6,7 +6,7 @@
 /*   By: mkaliszc <mkaliszc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 13:09:50 by mkaliszc          #+#    #+#             */
-/*   Updated: 2024/10/16 13:53:07 by mkaliszc         ###   ########.fr       */
+/*   Updated: 2024/10/17 01:28:46 by mkaliszc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,26 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = 0;
-	ptr = malloc(sizeof(char) * (len));
+	if (start > ft_strlen(s))
+	{
+		ptr = malloc(sizeof(char));
+		if (ptr == NULL)
+			return (NULL);
+		ptr[0] = '\0';
+		return (ptr);
+	}
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
+	ptr = malloc(sizeof(char) * (len + 1));
 	if (ptr == NULL)
-		return(NULL);
+		return (NULL);
 	while (i < len)
 	{
 		ptr[i] = s[start + i];
 		i++;
 	}
 	ptr[i] = '\0';
-	return(ptr);
+	return (ptr);
 }
 
 /* int main()
@@ -35,7 +45,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	const char	test[] = "Hello, World";
 	char	*ptr;
 
-	ptr = ft_substr(test, 7, 6);
+	ptr = ft_substr("", 0, 0);
 	printf("%s", ptr);
+	free(ptr);
 	return(0);
 } */

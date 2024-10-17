@@ -6,7 +6,7 @@
 /*   By: mkaliszc <mkaliszc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 17:24:11 by mkaliszc          #+#    #+#             */
-/*   Updated: 2024/10/15 23:56:41 by mkaliszc         ###   ########.fr       */
+/*   Updated: 2024/10/16 23:05:30 by mkaliszc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	cast = (const unsigned char *)src;
 	d = (unsigned char *)dest;
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	while (i < n)
 	{
 		d[i] = cast[i];
@@ -32,7 +34,13 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 /* int main()
 {
 	char	test[11];
-    ft_memcpy(test, "abcdefghijkl", 10);
+	char	*test2 = NULL;
+	char	*test3 = NULL;
+	
+  ft_memcpy(test, "abcdefghijkl", 10);
     test[11] = '\0';
-    printf("%s", test);
+    printf("%s\n", test);
+
+	printf("%s\n", (char *)ft_memcpy("","test", 1));
+	printf("%s\n", (char*)memcpy("", "test", 0));
 } */
