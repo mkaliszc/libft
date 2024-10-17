@@ -6,7 +6,7 @@
 /*   By: mkaliszc <mkaliszc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 05:14:13 by mkaliszc          #+#    #+#             */
-/*   Updated: 2024/10/17 05:24:25 by mkaliszc         ###   ########.fr       */
+/*   Updated: 2024/10/17 15:25:39 by mkaliszc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,20 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (str);
 }
 
+/* char reverse_case(unsigned int i, char c)
+{
+	(void)i;
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	else if (c >= 'A' && c <= 'Z')
+		return (c + 32);  // Convert to lowercase
+	return (c);
+}
+
+int main()
+{
+	char	str[] = "bonjour";
+
+	printf("%s", ft_strmapi(str, reverse_case));
+	return(0);
+} */
