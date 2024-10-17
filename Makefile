@@ -33,8 +33,13 @@ SOURCES = \
     ft_putchar_fd.c \
     ft_putstr_fd.c \
     ft_putendl_fd.c \
+    ft_putnbr_fd.c \
+
+BONUS = ft_lstnew_bonus.c
 
 OBJECTS = $(SOURCES:.c=.o)
+
+OBJECT_BONUS = $(BONUS:.c=.o)
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
@@ -46,7 +51,10 @@ $(NAME): $(OBJECTS)
 	$(AR) -rcs $@ $^
 
 %.o: %.c
-	$(CC) -c $(CFLAGS) $?
+	$(CC) -c $(CFLAGS) $<
+
+bonus: $(NAME) $(OBJECTS_BONUS)
+	$(AR) -rcs $@ $^
 
 clean:
 	rm -f $(OBJECTS)
