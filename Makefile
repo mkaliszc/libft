@@ -35,11 +35,13 @@ SOURCES = \
     ft_putendl_fd.c \
     ft_putnbr_fd.c \
 
-BONUS = ft_lstnew_bonus.c
+BONUS = ft_lstnew_bonus.c \
+        ft_lstadd_front_bonus.c \
+        ft_lstsize.c \
 
 OBJECTS = $(SOURCES:.c=.o)
 
-OBJECT_BONUS = $(BONUS:.c=.o)
+OBJECTS_BONUS = $(BONUS:.c=.o)
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
