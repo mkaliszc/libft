@@ -6,7 +6,7 @@
 /*   By: mkaliszc <mkaliszc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 00:06:39 by mkaliszc          #+#    #+#             */
-/*   Updated: 2024/10/19 01:12:47 by mkaliszc         ###   ########.fr       */
+/*   Updated: 2024/10/19 01:16:09 by mkaliszc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,12 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	t_list	*pos;
 
 	if (new == NULL)
-		return;
+		return ;
+	if (*lst == NULL)
+	{
+		*lst = new;
+		return ;
+	}
 	pos = *lst;
 	while (pos -> next != NULL)
 		pos = pos -> next;
