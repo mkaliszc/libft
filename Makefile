@@ -66,7 +66,7 @@ bonus: $(NAME) $(OBJECTS_BONUS)
 	$(AR) -rcs $(NAME) $(OBJECTS_BONUS)
 
 clean:
-	rm -f $(OBJECTS)
+	rm -f $(OBJECTS) $(OBJECTS_BONUS)
 
 fclean: clean
 	rm -f $(NAME)
