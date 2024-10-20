@@ -6,7 +6,7 @@
 /*   By: mkaliszc <mkaliszc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 17:27:42 by mkaliszc          #+#    #+#             */
-/*   Updated: 2024/10/19 17:27:44 by mkaliszc         ###   ########.fr       */
+/*   Updated: 2024/10/20 17:55:02 by mkaliszc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_lstsize(t_list *lst)
     node1->next = node2;
     node2->next = node3;
 
-    printf("List size: %d\n", ft_lstsize(node1));  // Output should be 3
+    printf("List size: %d\n", ft_lstsize(node1));
 
     return (0);
 } */

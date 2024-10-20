@@ -6,7 +6,7 @@
 /*   By: mkaliszc <mkaliszc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 05:14:13 by mkaliszc          #+#    #+#             */
-/*   Updated: 2024/10/17 15:25:39 by mkaliszc         ###   ########.fr       */
+/*   Updated: 2024/10/20 17:29:47 by mkaliszc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 int main()
 {
-	char	str[] = "bonjour";
+	char	str[] = "bONJOUR";
 
 	printf("%s", ft_strmapi(str, reverse_case));
 	return(0);

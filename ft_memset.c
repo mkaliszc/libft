@@ -6,7 +6,7 @@
 /*   By: mkaliszc <mkaliszc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 12:22:32 by mkaliszc          #+#    #+#             */
-/*   Updated: 2024/10/15 14:08:19 by mkaliszc         ###   ########.fr       */
+/*   Updated: 2024/10/20 19:04:16 by mkaliszc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,7 @@ void	*ft_memset(void *s, int c, size_t n)
     ft_memset(test, 'A', 10);
     test[10] = '\0';
     printf("%s", test);
-} */
+}
+
+note : unisgned char plus petit attribuable
+*/

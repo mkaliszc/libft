@@ -6,7 +6,7 @@
 /*   By: mkaliszc <mkaliszc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 02:24:51 by mkaliszc          #+#    #+#             */
-/*   Updated: 2024/10/19 19:36:00 by mkaliszc         ###   ########.fr       */
+/*   Updated: 2024/10/20 18:32:37 by mkaliszc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,13 +42,15 @@ char	**ft_free_all(char **tab, size_t j)
 	size_t	i;
 
 	i = 0;
+	if (tab == NULL)
+		return (NULL);
 	while (i < j)
 	{
 		free(tab[i]);
 		i++;
 	}
 	free(tab);
-	return (tab);
+	return (NULL);
 }
 
 char	**create_tab(char **tab, char const *charset, char sep)
@@ -95,7 +97,7 @@ char	**ft_split(char const *s, char c)
 	char **tab;
 
 	i = 0;
-	tab = ft_split("test1test1test1test", '1');
+	tab = ft_split("hello!", ' ');
 	while (tab[i])
 	{
 		printf("%s\n", tab[i]);

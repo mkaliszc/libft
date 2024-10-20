@@ -6,7 +6,7 @@
 /*   By: mkaliszc <mkaliszc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 17:27:25 by mkaliszc          #+#    #+#             */
-/*   Updated: 2024/10/19 17:27:27 by mkaliszc         ###   ########.fr       */
+/*   Updated: 2024/10/20 17:53:06 by mkaliszc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,17 +32,12 @@ t_list	*ft_lstnew(void *content)
     node = ft_lstnew(content);
     if (node == NULL)
     {
-        printf("Error: ft_lstnew returned NULL\n");
+        printf("Error\n");
         return (1);
     }
-    if (strcmp(node->content, content) == 0)
-        printf("Content: %s\n", (char *)node->content);
-    else
-        printf("Error: Content does not match\n");
+    printf("Content: %s\n", (char *)node->content);
     if (node->next == NULL)
-        printf("Next pointer is NULL, as expected.\n");
-    else
-        printf("Error: Next pointer is not NULL\n");
+        printf("end reached.\n");
     free(content);
     free(node);
     return (0);
