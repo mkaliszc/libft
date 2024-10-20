@@ -6,7 +6,7 @@
 /*   By: mkaliszc <mkaliszc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 02:24:51 by mkaliszc          #+#    #+#             */
-/*   Updated: 2024/10/20 18:32:37 by mkaliszc         ###   ########.fr       */
+/*   Updated: 2024/10/20 22:09:08 by mkaliszc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,57 +37,45 @@ int	ft_count_words(char const *s, char c)
 	return (count);
 }
 
-char	**ft_free_all(char **tab, size_t j)
+static void	ft_free_all(char **tab, size_t j)
 {
 	size_t	i;
 
 	i = 0;
-	if (tab == NULL)
-		return (NULL);
 	while (i < j)
 	{
 		free(tab[i]);
 		i++;
 	}
 	free(tab);
-	return (NULL);
-}
-
-char	**create_tab(char **tab, char const *charset, char sep)
-{
-	size_t	i;
-	size_t	j;
-	size_t	memory;
-
-	i = 0;
-	j = 0;
-	while (charset[i] != '\0')
-	{
-		if (charset[i] != sep)
-		{
-			memory = i;
-			while (charset[i] && charset[i] != sep)
-				i++;
-			tab[j] = ft_substr(charset, memory, i - memory);
-			if (!tab[j])
-				return (ft_free_all(tab, j));
-			j++;
-		}
-		else
-			i++;
-	}
-	tab[j] = NULL;
-	return (tab);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**tab;
+	size_t	i;
+	size_t	len;
+	size_t	nbr_words;
 
-	tab = malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
-	if (tab == NULL)
+	nbr_words = ft_count_words(s, c);
+	tab = (char **)malloc(sizeof(char *) * (nbr_words + 1));
+	if (!tab)
 		return (NULL);
-	create_tab(tab, s, c);
+	i = 0;
+	while (i < nbr_words)
+	{
+		while (*s == c)
+			s++;
+		len = 0;
+		while (s[len] && s[len] != c)
+			len++;
+		tab[i] = ft_substr(s, 0, len);
+		if (!tab[i])
+			return (ft_free_all(tab, i), NULL);
+		s += len;
+		i++;
+	}
+	tab[i] = NULL;
 	return (tab);
 }
 
@@ -97,7 +85,7 @@ char	**ft_split(char const *s, char c)
 	char **tab;
 
 	i = 0;
-	tab = ft_split("hello!", ' ');
+	tab = ft_split("xxxxxxxxhello!", 'x');
 	while (tab[i])
 	{
 		printf("%s\n", tab[i]);
