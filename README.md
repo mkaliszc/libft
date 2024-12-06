@@ -4,7 +4,7 @@ Lbft : Premier projet de 42.
 - Reproduire des fonctions de bases de la lib c, afin de mieux les comprendre et de se les attribuer.
   
 2eme partie :
-- Fonction additionnelle pratique.
+- Fonctions additionnelles pratiques.
   
 Bonus :
 - Linked list et struct.
